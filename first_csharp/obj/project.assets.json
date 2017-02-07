@@ -6713,16 +6713,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Cloud Drives\\Onedrive\\Documents\\CodingDojo\\c#\\first_csharp\\first_csharp.csproj",
+      "projectUniqueName": "D:\\Cloud Drives\\Onedrive\\Documents\\CodingDojo\\c#\\csharp-first\\first_csharp\\first_csharp.csproj",
       "projectName": "first_csharp",
-      "projectPath": "D:\\Cloud Drives\\Onedrive\\Documents\\CodingDojo\\c#\\first_csharp\\first_csharp.csproj",
-      "outputPath": "D:\\Cloud Drives\\Onedrive\\Documents\\CodingDojo\\c#\\first_csharp\\obj\\",
+      "projectPath": "D:\\Cloud Drives\\Onedrive\\Documents\\CodingDojo\\c#\\csharp-first\\first_csharp\\first_csharp.csproj",
+      "outputPath": "D:\\Cloud Drives\\Onedrive\\Documents\\CodingDojo\\c#\\csharp-first\\first_csharp\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.0"
       ],
       "files": {
-        "lib/netcoreapp1.0/first_csharp.dll": "D:\\Cloud Drives\\Onedrive\\Documents\\CodingDojo\\c#\\first_csharp\\bin\\placeholder\\netcoreapp1.0\\first_csharp.dll"
+        "lib/netcoreapp1.0/first_csharp.dll": "D:\\Cloud Drives\\Onedrive\\Documents\\CodingDojo\\c#\\csharp-first\\first_csharp\\bin\\placeholder\\netcoreapp1.0\\first_csharp.dll"
       },
       "frameworks": {
         "netcoreapp1.0": {
