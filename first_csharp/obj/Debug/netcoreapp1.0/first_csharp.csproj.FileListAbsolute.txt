@@ -1,0 +1,8 @@
+D:\Cloud Drives\Onedrive\Documents\CodingDojo\c#\first_csharp\bin\Debug\netcoreapp1.0\first_csharp.deps.json
+D:\Cloud Drives\Onedrive\Documents\CodingDojo\c#\first_csharp\bin\Debug\netcoreapp1.0\first_csharp.runtimeconfig.json
+D:\Cloud Drives\Onedrive\Documents\CodingDojo\c#\first_csharp\bin\Debug\netcoreapp1.0\first_csharp.runtimeconfig.dev.json
+D:\Cloud Drives\Onedrive\Documents\CodingDojo\c#\first_csharp\bin\Debug\netcoreapp1.0\first_csharp.dll
+D:\Cloud Drives\Onedrive\Documents\CodingDojo\c#\first_csharp\bin\Debug\netcoreapp1.0\first_csharp.pdb
+D:\Cloud Drives\Onedrive\Documents\CodingDojo\c#\first_csharp\obj\Debug\netcoreapp1.0\first_csharp.AssemblyInfo.cs
+D:\Cloud Drives\Onedrive\Documents\CodingDojo\c#\first_csharp\obj\Debug\netcoreapp1.0\first_csharp.dll
+D:\Cloud Drives\Onedrive\Documents\CodingDojo\c#\first_csharp\obj\Debug\netcoreapp1.0\first_csharp.pdb
