@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 
 namespace blackJack {
-    public class Turn {
-        public bool checkBlackJack (Player player) {
+    public static class Turn {
+        public static bool checkBlackJack (Player player) {
             int sum = 0;
             foreach (Card card in player.hand) {
                 sum += card.realVal;
@@ -12,7 +12,7 @@ namespace blackJack {
                 return true;
             } else return false;
         }
-        public int checkTotal (Player player) {
+        public static int checkTotal (Player player) {
             int sum = 0;
             int aces = 0;
             foreach (Card card in player.hand) {
@@ -30,8 +30,8 @@ namespace blackJack {
             }
             return sum;
         }
-        public string checkWinner (Table table) {
-            this.showTable(table);
+        public static string checkWinner (Table table) {
+            showTable(table);
             int dealer = checkTotal (table.PlayerList[0]);
             if (dealer < 0) {
                 foreach (Player player in table.PlayerList) {
@@ -70,7 +70,7 @@ namespace blackJack {
             }
             return results;
         }
-        public string hitOrStand (Player player) {
+        public static string hitOrStand (Player player) {
             string output = "";
             while (output != "HIT" && output != "STAND") {
                 System.Console.WriteLine ("Do you wish to Hit or Stand?");
@@ -81,7 +81,7 @@ namespace blackJack {
         }
 
         // This function displays the cards that each player has visible on the table.
-        public void showTable (Table table) {
+        public static void showTable (Table table) {
             // Each player, in order...
             foreach (Player player in table.PlayerList) {
                 // Display the name of the player
@@ -118,7 +118,7 @@ namespace blackJack {
             }
         }
         // This flips face down cards face up.
-        public void showHand (Player player) {
+        public static void showHand (Player player) {
             // Shows a message to let us know that we are flipping the cards.
             Console.WriteLine ("Let's see what " + player.name + " has, shall we?");
             // For every card in the passed player's hand...
@@ -127,7 +127,7 @@ namespace blackJack {
                 card.faceDown = false;
             }
         }
-        public void resetHand (Table table) {
+        public static void resetHand (Table table) {
             foreach (Player player in table.PlayerList) {
                 player.hand.Clear ();
             }

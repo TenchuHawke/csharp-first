@@ -15,8 +15,9 @@ namespace blackJack {
             isDealer = false;
             wins = 0.0;
         }
+        
         // function that runs the dealer logic. return the dealers score or - for a bust
-        public void dealerRound (Table table, Turn MyTurn) {
+        public void dealerRound (Table table) {
             Player dealer = table.PlayerList[0];
             int inGame = 0;
             // did the player bust? && is you a dealer??
@@ -25,7 +26,7 @@ namespace blackJack {
                 if (player == dealer) {
                     continue;
                 }
-                int busted = MyTurn.checkTotal (player);
+                int busted = Turn.checkTotal (player);
                 if (busted > 0) {
                     inGame = inGame + 1;
                 }
@@ -34,17 +35,17 @@ namespace blackJack {
             if (inGame > 0) {
                 // this is the score that will be messed with
                 dealer.hand[0].faceDown=false;
-                MyTurn.showTable (table);
+                Turn.showTable (table);
                 // show total
 
-                int score = MyTurn.checkTotal (dealer);
+                int score = Turn.checkTotal (dealer);
                 while (score < 16) {
                     dealer.Draw (table.deckName);
-                    score = MyTurn.checkTotal (dealer);
+                    score = Turn.checkTotal (dealer);
                     if (score == -1) {
                         break;
                     }
-                    MyTurn.showTable (table);
+                    Turn.showTable (table);
                 }
                 return;
             }
