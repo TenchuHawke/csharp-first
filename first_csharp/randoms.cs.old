@@ -1,0 +1,184 @@
+using System;
+
+namespace ConsoleApp {
+    class Program {
+
+        static void Main (string [] args) {
+            Random rand = new Random ();
+            System.Console.WriteLine ("D20");
+            int [] counts = new int [] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            for (int i = 0; i < 10000; i++) {
+                int bob = (int) (rand.NextDouble () * 20);
+                counts [bob]++;
+            }
+            for (int i = 0; i < 20; i++) {
+                System.Console.WriteLine ((i + 1) + " rolls " + counts [i]);
+            }
+            System.Console.WriteLine ("\n \n 3d6");
+            int [] counts2 = new int [] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            for (int i = 0; i < 10000; i++) {
+                int roll1 = (int) (rand.NextDouble () * 6 + 1);
+                int roll2 = (int) (rand.NextDouble () * 6 + 1);
+                int roll3 = (int) (rand.NextDouble () * 6 + 1);
+
+                int bob = roll1 + roll2 + roll3;
+                counts2 [bob]++;
+            }
+            for (int i = 3; i < 19; i++) {
+                System.Console.WriteLine ((i) + " rolls " + counts2 [i]);
+            }
+            System.Console.WriteLine ("\n \n 4d6 drop lowest");
+
+            int [] counts4 = new int [] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            for (int i = 0; i < 10000; i++) {
+                int roll1 = (int) (rand.NextDouble () * 6 + 1);
+                int roll2 = (int) (rand.NextDouble () * 6 + 1);
+                int roll3 = (int) (rand.NextDouble () * 6 + 1);
+                int roll4 = (int) (rand.NextDouble () * 6 + 1);
+
+                int min = roll1;
+                if (roll2 < min) {
+                    min = roll2;
+                }
+                if (roll3 < min) {
+                    min = roll3;
+                }
+                if (roll4 < min) {
+                    min = roll4;
+                }
+
+                int bob = roll1 + roll2 + roll3 + roll4 - min;
+                counts4 [bob]++;
+            }
+            for (int i = 3; i < 19; i++) {
+                System.Console.WriteLine ((i) + " rolls " + counts4 [i]);
+            }
+            System.Console.WriteLine ("\n \n 4d6 drop lowest straight 18's");
+            int count = 0;
+            int [] result = new int [] { 0, 0, 0, 0, 0, 0 };
+            for (int i = 0; i < 1000000000; i++) {
+                int roll1 = (int) (rand.NextDouble () * 6 + 1);
+                int roll2 = (int) (rand.NextDouble () * 6 + 1);
+                int roll3 = (int) (rand.NextDouble () * 6 + 1);
+                int roll4 = (int) (rand.NextDouble () * 6 + 1);
+                int roll5 = (int) (rand.NextDouble () * 6 + 1);
+                int roll6 = (int) (rand.NextDouble () * 6 + 1);
+                int roll7 = (int) (rand.NextDouble () * 6 + 1);
+                int roll8 = (int) (rand.NextDouble () * 6 + 1);
+                int roll9 = (int) (rand.NextDouble () * 6 + 1);
+                int roll10 = (int) (rand.NextDouble () * 6 + 1);
+                int roll11 = (int) (rand.NextDouble () * 6 + 1);
+                int roll12 = (int) (rand.NextDouble () * 6 + 1);
+                int roll13 = (int) (rand.NextDouble () * 6 + 1);
+                int roll14 = (int) (rand.NextDouble () * 6 + 1);
+                int roll15 = (int) (rand.NextDouble () * 6 + 1);
+                int roll16 = (int) (rand.NextDouble () * 6 + 1);
+                int roll17 = (int) (rand.NextDouble () * 6 + 1);
+                int roll18 = (int) (rand.NextDouble () * 6 + 1);
+                int roll19 = (int) (rand.NextDouble () * 6 + 1);
+                int roll20 = (int) (rand.NextDouble () * 6 + 1);
+                int roll21 = (int) (rand.NextDouble () * 6 + 1);
+                int roll22 = (int) (rand.NextDouble () * 6 + 1);
+                int roll23 = (int) (rand.NextDouble () * 6 + 1);
+                int roll24 = (int) (rand.NextDouble () * 6 + 1);
+
+                int min = roll1;
+                if (roll2 < min) {
+                    min = roll2;
+                }
+                if (roll3 < min) {
+                    min = roll3;
+                }
+                if (roll4 < min) {
+                    min = roll4;
+                }
+                int min2 = roll5;
+                if (roll6 < min2) {
+                    min2 = roll6;
+                }
+                if (roll7 < min2) {
+                    min2 = roll7;
+                }
+                if (roll8 < min2) {
+                    min2 = roll8;
+                }
+                int min3 = roll9;
+                if (roll10 < min3) {
+                    min3 = roll10;
+                }
+                if (roll11 < min3) {
+                    min3 = roll11;
+                }
+                if (roll12 < min3) {
+                    min3 = roll12;
+                }
+                int min4 = roll13;
+                if (roll14 < min4) {
+                    min4 = roll14;
+                }
+                if (roll15 < min4) {
+                    min4 = roll15;
+                }
+                if (roll6 < min4) {
+                    min4 = roll6;
+                }
+                int min5 = roll17;
+                if (roll8 < min5) {
+                    min5 = roll8;
+                }
+                if (roll9 < min5) {
+                    min5 = roll9;
+                }
+                if (roll20 < min5) {
+                    min5 = roll20;
+                }
+                int min6 = roll21;
+                if (roll22 < min6) {
+                    min6 = roll22;
+                }
+                if (roll23 < min6) {
+                    min6 = roll23;
+                }
+                if (roll24 < min6) {
+                    min6 = roll24;
+                }
+
+                int bob = roll1 + roll2 + roll3 + roll4 - min;
+                int bob2 = roll5 + roll6 + roll7 + roll8 - min2;
+                int bob3 = roll9 + roll10 + roll11 + roll12 - min3;
+                int bob4 = roll13 + roll14 + roll15 + roll16 - min4;
+                int bob5 = roll17 + roll18 + roll19 + roll20 - min5;
+                int bob6 = roll21 + roll2 + roll23 + roll24 - min6;
+                if (bob == 18 && bob2 == 18 && bob3 == 18 && bob4 == 18 && bob5 == 18 && bob6 == 18) {
+                    count++;
+                }
+
+                if (bob == 18) {
+                    result [0]++;
+                }
+                if (bob2 == 18) {
+                    result [1]++;
+                }
+                if (bob3 == 18) {
+                    result [2]++;
+                }
+                if (bob4 == 18) {
+                    result [3]++;
+                }
+                if (bob5 == 18) {
+                    result [4]++;
+                }
+                if (bob6 == 18) {
+                    result [5]++;
+                }
+
+            }
+            for (int i = 0; i < 6; i++) {
+                System.Console.WriteLine (result [i]);
+            }
+            double percentage = (double) count / 1000000000;
+            System.Console.WriteLine (count + " times in 1000000000, for a percentage of " + percentage);
+        }
+    }
+
+};
