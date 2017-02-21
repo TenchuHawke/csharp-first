@@ -1,0 +1,8 @@
+@{
+<h4>Try: @ViewBag.count</h4>
+<h1>@ViewBag.Passcode</h1>
+<form action="/" , method="post">
+    <button type="Submit">Generate new code</button>
+    <input type="hidden" name="count" value="@ViewBag.count">
+</form>
+}

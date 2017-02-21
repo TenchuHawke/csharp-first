@@ -15,7 +15,7 @@ namespace blackJack {
             isDealer = false;
             wins = 0.0;
         }
-        
+
         // function that runs the dealer logic. return the dealers score or - for a bust
         public void dealerRound (Table table) {
             Player dealer = table.PlayerList[0];
@@ -31,21 +31,25 @@ namespace blackJack {
                     inGame = inGame + 1;
                 }
             }
-
             if (inGame > 0) {
-                // this is the score that will be messed with
-                dealer.hand[0].faceDown=false;
-                Turn.showTable (table);
-                // show total
-
+                dealer.hand[0].faceDown = false;
                 int score = Turn.checkTotal (dealer);
                 while (score < 16) {
+                    System.Console.Clear ();
+                    Turn.showTable (table);
+                    System.Console.WriteLine ("Hit return to continue.");
+                    System.Console.ReadLine ();
                     dealer.Draw (table.deckName);
+                    System.Console.WriteLine ("Hit return to continue.");
+                    System.Console.ReadLine ();
                     score = Turn.checkTotal (dealer);
                     if (score == -1) {
+                        System.Console.WriteLine ("The Dealer Busted!");
+                        System.Console.WriteLine ("Hit return to continue.");
+                        System.Console.ReadLine ();
+
                         break;
                     }
-                    Turn.showTable (table);
                 }
                 return;
             }

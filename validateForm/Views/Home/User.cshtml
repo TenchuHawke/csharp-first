@@ -1,0 +1,7 @@
+<div>
+    @{ foreach(var error in ViewBag.errors) { //If there are any errors for a field...
+    <p>@error[0].ErrorMessage</p>
+    } }
+
+    <h1> @ViewBag.Name </h1>
+</div>

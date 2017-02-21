@@ -1,7 +1,7 @@
 {
     "version": "0.2.0",
-    "configurations": [
-        {
+    "configurations": [{
+
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
             "request": "launch",
@@ -9,7 +9,7 @@
             "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.0\\blackjack.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
-            "externalConsole": false,
+            "externalConsole": true,
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
         },
