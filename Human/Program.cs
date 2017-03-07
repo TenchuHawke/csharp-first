@@ -33,8 +33,8 @@ namespace ConsoleApplication {
         }
         public void attack (object target) {
             if (target is Human) {
-                // Human Target = target as Human;
-                target.Health -= (this.Strength * 5);
+                Human Target = target as Human;
+                Target.Health -= (this.Strength * 5);
                 System.Console.WriteLine ("Your attack does " + (this.Strength * 5) + " damage to " + Target.Name);
             } else {
                 System.Console.WriteLine ("Your Attack is ineffective on that target!");
